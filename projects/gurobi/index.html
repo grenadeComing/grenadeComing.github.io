@@ -4,14 +4,47 @@
   <meta charset="UTF-8">
   <title>Gurobi Code Repair Agent</title>
 </head>
-<body style="font-family: -apple-system; padding:40px; max-width:800px; margin:auto;">
+<body style="font-family: -apple-system, system-ui, -webkit-system-font, sans-serif; padding:40px; max-width:800px; margin:auto; line-height:1.6;">
   <h1>Gurobi Code Repair Agent</h1>
   <p>
-    This agent automatically identifies and repairs optimization model bugs in Gurobi MIP/ILP code using tool execution, static analysis, and test-driven evaluation.
+    This agent automatically identifies and repairs optimization model bugs in Gurobi LP/MIP/ILP code using tool execution, static analysis, and test-driven evaluation.
   </p>
+
   <h2>Overview</h2>
-  <p>Gurobi…</p>
-  
+  <p>
+    This project builds an end-to-end <strong>code repair agent</strong> for Gurobi-based optimization models, together with a
+    curated benchmark and a rigorous evaluation pipeline.
+  </p>
+  <p>
+    I created a dataset of <strong>26 Gurobi use cases</strong> covering linear programming (LP), integer programming (ILP),
+    mixed-integer programming (MIP), quadratic-constrained problems (QCP), and classic combinatorial/logistics models.
+    Each use case includes a natural language description, the mathematical formulation, and a reference Gurobi
+    implementation.
+  </p>
+  <p>
+    For every use case, I wrote a <strong>10-test unit-test suite</strong> (260 tests total) that checks:
+  </p>
+  <ul>
+    <li>Model construction and parameter validation</li>
+    <li>Solver behavior (optimal, infeasible, unbounded cases)</li>
+    <li>Correctness of the objective value and selected variables</li>
+    <li>Constraint satisfaction and basic numerical sanity</li>
+  </ul>
+  <p>
+    On top of this benchmark, I implemented an <strong>agent with tools</strong> for:
+  </p>
+  <ul>
+    <li><strong>Static analysis</strong>: detect syntax errors, API misuse, and common modeling mistakes</li>
+    <li><strong>Execution tools</strong>: run the Gurobi script, capture crashes and solver output</li>
+    <li><strong>Patch tools</strong>: apply minimal, diff-style edits to repair the code</li>
+  </ul>
+  <p>
+    The agent runs in an iterative loop: it reads the failing script, analyzes the error signal, proposes and applies a
+    fix, and then re-runs the unit tests. I evaluate the agent on <strong>every question/use case</strong> by measuring
+    compile/execute success and pass/fail/error across all unit tests, under different tool configurations.
+  </p>
+
+  <h2>Paper</h2>
   <iframe 
     src="../../pdfjs/web/viewer.html?file=/projects/gurobi/gurobi_paper.pdf"
     style="width:100%; height:900px; border:none;">
@@ -22,7 +55,11 @@
   </p>
   
   <h2>Examples</h2>
-  <p>Show code examples or screenshots…</p>
+  <p>
+    Coming soon: code snippets showing a broken Gurobi model, the agent’s tool calls, and the final repaired solution
+    that passes all unit tests.
+  </p>
+  
   <p><a href="../../index.html">← Back to Home</a></p>
 </body>
 </html>
