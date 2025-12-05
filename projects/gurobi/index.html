@@ -37,13 +37,10 @@
   </ul>
 
   <p>
-    On top of this benchmark, I implemented an <strong>agent with tools</strong> for:
+    On top of this benchmark, I implemented a set of repair tools, where idea is used in the Lean4 project. 
+    However, the Gurobi domain introduces its own unique challenges: Gurobi model or gurobipy execution exposes only coarse solver signals, unlike Python exceptions that often pinpoint the exact line or operation causing failure. 
+    The running result of Gurobi model (coding) will not tell you if your coding is correct, hence human unittest for different input-output check is necessary, hence the oracle code matters.
   </p>
-  <ul>
-    <li><strong>Static analysis</strong>: detect syntax errors, API misuse, and common modeling mistakes</li>
-    <li><strong>Execution tools</strong>: run the Gurobi script, capture crashes and solver output</li>
-    <li><strong>Patch tools</strong>: apply minimal, diff-style edits to repair the code</li>
-  </ul>
 
   <p>
     The agent runs in an iterative loop: it reads the failing script, analyzes the error signal, proposes and applies a fix, and then re-runs the unit tests. I evaluate the agent on <strong>every use case</strong> by measuring compile/execute success and pass/fail/error across all unit tests.
