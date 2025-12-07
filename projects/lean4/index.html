@@ -14,10 +14,16 @@
 ">
   
   <h1>Lean4 Autoformalization System</h1>
+  <h1>
+  <a href="https://github.com/grenadeComing/Lean_Translation_Agent" target="_blank" style="text-decoration:none; color:inherit;">
+    Lean4 Autoformalization System
+  </a>
+  </h1>
 
   <p>
-    This project develops an agent system that translates natural-language mathematics into Lean4 code,
-    and verifies correctness using theorem checking, REPL feedback, and iterative refinement.
+    This project develops an agent system that translates natural-language mathematics into Lean4 code and filled it by sorry,
+    and verifies correctness using theorem checking, REPL feedback and others tools by iterative refinement.
+    Will extend the work so it can do theorem proving.
   </p>
 
   <hr style="margin: 40px 0;">
@@ -38,17 +44,7 @@
 
   <h2>Overview</h2>
   <p>
-    (Write a short description here — what problem you solve, why Lean4, what the agent does.)
-  </p>
-
-  <h2>Technical Details</h2>
-  <p>
-    (Architecture, tools, modules — REPL feedback, theorem checker, translator, search, etc.)
-  </p>
-
-  <h2>Examples</h2>
-  <p>
-    (You can add sample natural-language → Lean4 pairs, screenshots, diagrams.)
+    Define a base_tool that all other tools inherit from, so they share a unified structure and the same path-validation logic.
   </p>
 
   <p><a href="../../index.html">← Back to Home</a></p>
