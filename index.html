@@ -1,70 +1,160 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ke Zhang</title>
+
+  <!-- Font Awesome (icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 40px 20px;
       background: #f5f7fa;
       color: #333;
       font-size: 18px;
     }
+
     .container {
       max-width: 1200px;
       margin: auto;
       background: white;
       padding: 60px;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.1);
     }
+
+    /* Photo */
     .photo {
       width: 200px;
       height: 200px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      margin: 0 auto 20px;
+      margin: 0 auto 24px;
       border: 3px solid #eee;
     }
+
+    /* Headings */
     h1 {
       text-align: center;
       font-weight: 600;
       margin-bottom: 10px;
-      font-size: 2.5em;  /* Your name stays large */
+      font-size: 2.6em;
     }
+
     h2 {
       text-align: center;
       font-weight: 600;
-      margin-bottom: 10px;
-      font-size: 1.6em;  /* CHANGED - smaller than h1 but still prominent */
+      margin-top: 60px;
+      margin-bottom: 22px;
+      font-size: 1.45em;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 8px;
     }
+
     .subtitle {
       text-align: center;
       font-size: 1.3em;
       color: #555;
       margin-bottom: 30px;
     }
+
+    /* Links */
     .links {
       text-align: center;
-      margin-bottom: 35px;
-      font-size: 1.3em;
+      margin-bottom: 40px;
+      font-size: 1.2em;
     }
-    a {
+
+    .links a {
       color: #0066cc;
       text-decoration: none;
       font-weight: 500;
+      margin: 0 8px;
     }
-    a:hover {
+
+    .links a:hover {
       text-decoration: underline;
     }
+
+    /* Lists */
     ul {
+      max-width: 800px;
+      margin: 0 auto;
       line-height: 1.7;
       font-size: 1.1em;
     }
+
     hr {
-      margin: 40px 0;
+      margin: 60px 0;
       border: none;
       border-top: 1px solid #ddd;
     }
-</style>
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      padding: 30px 34px;
+      border-radius: 14px;
+      background: #fafafa;
+      border: 1px solid #e5e7eb;
+      transition: all 0.2s ease;
+    }
+
+    .project-card:hover {
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+
+    .project-title {
+      font-size: 1.3em;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .project-title a {
+      color: #111;
+      text-decoration: none;
+    }
+
+    .project-title a:hover {
+      text-decoration: underline;
+    }
+
+    .project-meta {
+      margin-top: 6px;
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    .project-desc {
+      margin-top: 14px;
+      line-height: 1.6;
+      font-size: 1.05em;
+      color: #333;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
 
 <body>
   <div class="container">
@@ -75,55 +165,76 @@
     <!-- Name + Title -->
     <h1>Ke Zhang</h1>
     <p class="subtitle">
-      PhD Student in Mathematics • University of California, Riverside<br>
+      PhD Student in Mathematics • University of California, Riverside
     </p>
+
+    <!-- Links -->
     <div class="links">
-      <a href="https://www.linkedin.com/in/ke-zhang-622545238/">
+      <a href="https://www.linkedin.com/in/ke-zhang-622545238/" target="_blank">
         <i class="fab fa-linkedin"></i> LinkedIn
-      </a> &nbsp;|&nbsp;
-    
-      <a href="https://github.com/grenadeComing">
+      </a> |
+      <a href="https://github.com/grenadeComing" target="_blank">
         <i class="fab fa-github"></i> GitHub
-      </a> &nbsp;|&nbsp;
-    
+      </a> |
       <a href="pdfjs/web/viewer.html?file=../files/KeZhang_cv.pdf" target="_blank">
         <i class="fas fa-file-pdf"></i> CV (PDF)
       </a>
     </div>
 
-
     <!-- Research Interests -->
     <h2>Research Interests</h2>
     <ul>
-      <li>Gurobi optimization coding repair agent</li>
-      <li>Lean4 autoformalization and theorem verification using AI agents</li>
-      <li>Tool-augmented LLM reasoning, and tools effect analysis</li>
-      <li>Car maintenence, oil change, rotor and brake pad change</li>
+      <li>Optimization modeling and automated code repair for Gurobi</li>
+      <li>Lean4 autoformalization and theorem verification with AI agents</li>
+      <li>Tool-augmented LLM reasoning and tool-effect analysis</li>
+      <li>Car maintenance: oil change, brake pad and rotor change</li>
     </ul>
 
     <hr>
 
     <!-- Projects -->
     <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong><a href="projects/gurobi/">Gurobi Code Repair Agent</a></strong> –
-        Wrote optimization problem use cases and unit tests, then ran them through an agent that automatically repairs buggy Gurobi code using a tool stack with RAG, code execution, and feedback loops.
-      </li>
-    
-      <li>
-        <strong><a href="projects/lean4/">Lean4 Autoformalization System</a></strong> –
-        Mathematical natural language statements → Lean4 code translation by agent method.
-      </li>
-    </ul>
+
+    <div class="projects">
+
+      <div class="project-card">
+        <h3 class="project-title">
+          <a href="projects/gurobi/">Gurobi Code Repair Agent</a>
+        </h3>
+        <div class="project-meta">
+          AAAI 2026 · AI4Research Workshop
+        </div>
+        <p class="project-desc">
+          Designed optimization problem use cases and unit tests, then evaluated
+          an agent that automatically identifies and repairs buggy Gurobi models
+          using tool execution, retrieval-augmented generation, and
+          test-driven feedback loops.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">
+          <a href="projects/lean4/">Lean4 Autoformalization System</a>
+        </h3>
+        <div class="project-meta">
+          NeurIPS 2025 · LLM Evaluation Workshop (Poster)
+        </div>
+        <p class="project-desc">
+          An agent-based system that translates mathematical natural language
+          statements into Lean4 code using translation, REPL feedback,
+          and theorem-checking tools.
+        </p>
+      </div>
+
+    </div>
 
     <hr>
 
     <!-- Contact -->
     <h2>Contact</h2>
-    <p style="text-align:center; font-size:1.1em;">
+    <div class="contact">
       Email: <strong>kzhan153@ucr.edu</strong>
-    </p>
+    </div>
 
   </div>
 </body>
