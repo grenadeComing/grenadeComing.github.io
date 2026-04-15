@@ -28,13 +28,13 @@
       text-align: center;
       font-weight: 600;
       margin-bottom: 10px;
-      font-size: 2.5em;  /* Your name stays large */
+      font-size: 2.5em;
     }
     h2 {
       text-align: center;
       font-weight: 600;
       margin-bottom: 10px;
-      font-size: 1.6em;  /* CHANGED - smaller than h1 but still prominent */
+      font-size: 1.6em;
     }
     .subtitle {
       text-align: center;
@@ -45,7 +45,14 @@
     .links {
       text-align: center;
       margin-bottom: 35px;
-      font-size: 1.3em;
+      font-size: 1.2em;
+    }
+    .bio {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      font-size: 1.05em;
+      line-height: 1.7;
+      color: #444;
     }
     a {
       color: #0066cc;
@@ -57,7 +64,18 @@
     }
     ul {
       line-height: 1.7;
-      font-size: 1.1em;
+      font-size: 1.05em;
+    }
+    .pub-list li {
+      margin-bottom: 14px;
+    }
+    .venue {
+      color: #777;
+      font-style: italic;
+    }
+    .status {
+      color: #b35900;
+      font-weight: 600;
     }
     hr {
       margin: 40px 0;
@@ -75,30 +93,65 @@
     <!-- Name + Title -->
     <h1>Ke Zhang</h1>
     <p class="subtitle">
-      PhD Student in Mathematics • University of California, Riverside<br>
+      PhD Student in Mathematics &bull; University of California, Riverside<br>
     </p>
     <div class="links">
-      <a href="https://www.linkedin.com/in/ke-zhang-622545238/">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a> &nbsp;|&nbsp;
-    
-      <a href="https://github.com/grenadeComing">
-        <i class="fab fa-github"></i> GitHub
-      </a> &nbsp;|&nbsp;
-    
-      <a href="pdfjs/web/viewer.html?file=../files/KeZhang_cv.pdf" target="_blank">
-        <i class="fas fa-file-pdf"></i> CV (PDF)
-      </a>
+      <a href="https://github.com/grenadeComing">GitHub</a> &nbsp;|&nbsp;
+      <a href="https://scholar.google.com/citations?user=QsY5g-QAAAAJ&amp;hl=en">Google Scholar</a> &nbsp;|&nbsp;
+      <a href="pdfjs/web/viewer.html?file=../files/KeZhang_cv.pdf" target="_blank">CV (PDF)</a>
     </div>
 
+    <!-- Bio -->
+    <p class="bio">
+      I am a PhD student in Mathematics at UC Riverside. My research sits at the
+      intersection of large language models and formal / scientific reasoning:
+      I build tool-augmented LLM agents for Lean&nbsp;4 autoformalization and for
+      repairing optimization code, and study how different tool categories causally
+      affect agent performance through factorial experiments. I also work on
+      physics-informed neural networks for nonlinear elasticity on curved surfaces.
+    </p>
+
+    <hr>
 
     <!-- Research Interests -->
     <h2>Research Interests</h2>
     <ul>
-      <li>Gurobi optimization coding repair agent</li>
-      <li>Lean4 autoformalization and theorem verification using AI agents</li>
-      <li>Tool-augmented LLM reasoning, and tools effect analysis</li>
-      <li>Car maintenence, oil change, rotor and brake pad change</li>
+      <li>Tool-augmented LLM agents and causal analysis of tool effects</li>
+      <li>Lean&nbsp;4 autoformalization and machine-checkable theorem verification</li>
+      <li>Agent-based code repair for optimization models (Gurobi)</li>
+      <li>Physics-informed neural networks for nonlinear elasticity on curved surfaces</li>
+      <li>Car maintenance, oil change, rotor and brake pad change</li>
+    </ul>
+
+    <hr>
+
+    <!-- Publications -->
+    <h2>Publications</h2>
+    <ul class="pub-list">
+      <li>
+        <strong>Understanding Tool-Augmented Agents for Lean Formalization: A Factorial Analysis</strong><br>
+        <u>Ke Zhang</u>, Patricio Gallardo, Maziar Raissi, Sudhir Murthy.<br>
+        <span class="venue">ICML 2026</span> &mdash; <span class="status">Under Review</span>.
+        A factorial study of how symbol retrieval, expert drafting, and Lean REPL feedback
+        causally affect compilation and semantic faithfulness on a new 400-theorem
+        graduate-level benchmark. The full agent framework lifts compilation from
+        26.0% (one-shot) to 89.5% and faithfulness from 28.0% to 60.5%.
+      </li>
+      <li>
+        <strong>Learning Parameterized Nonlinear Elasticity on Curved Surfaces</strong><br>
+        Yankang Liu, <u>Ke Zhang</u>, Maziar Raissi, Roya Zandi.<br>
+        <span class="venue">ICLR 2026</span> &mdash; Accepted.
+        A parameter-conditioned physics-informed neural network that represents a continuous
+        family of nonlinear elastic equilibria on curved manifolds from a single trained model.
+        I led the training pipeline and ablation studies.
+      </li>
+      <li>
+        <strong>Agent-Based Code Repair System for Gurobi Optimization Models</strong><br>
+        <span class="venue">AAAI 2025 Workshop</span> &mdash; Accepted.
+        Benchmark of 26 Gurobi problems with 260 unit tests, an LLM-based bug generator,
+        and a RAG-grounded repair agent over the Gurobi Python API, analyzed via
+        fractional factorial design.
+      </li>
     </ul>
 
     <hr>
@@ -107,13 +160,22 @@
     <h2>Projects</h2>
     <ul>
       <li>
-        <strong><a href="projects/gurobi/">Gurobi Code Repair Agent</a></strong> –
-        Wrote optimization problem use cases and unit tests, then ran them through an agent that automatically repairs buggy Gurobi code using a tool stack with RAG, code execution, and feedback loops.
+        <strong><a href="projects/lean4/">Lean&nbsp;4 Autoformalization System</a></strong> &ndash;
+        Tool-augmented agent that translates natural-language mathematical statements into
+        Lean&nbsp;4 code, with symbol retrieval, expert drafting (Herald), and REPL feedback
+        in a closed loop. Evaluated by full factorial design on 400 graduate-level theorems.
       </li>
-    
       <li>
-        <strong><a href="projects/lean4/">Lean4 Autoformalization System</a></strong> –
-        Mathematical natural language statements → Lean4 code translation by agent method.
+        <strong><a href="projects/gurobi/">Gurobi Code Repair Agent</a></strong> &ndash;
+        Wrote optimization problem use cases and unit tests, then ran them through an agent
+        that automatically repairs buggy Gurobi code using a tool stack with RAG, code
+        execution, and feedback loops.
+      </li>
+      <li>
+        <strong>Parameterized PINN for Nonlinear Elasticity on Curved Surfaces</strong> &ndash;
+        Parameter-conditioned physics-informed neural network that learns families of nonlinear
+        elastic equilibria on spheroidal surfaces, generalizing across geometric and material
+        parameters without per-instance retraining (PyTorch, dual NVIDIA RTX A6000).
       </li>
     </ul>
 
