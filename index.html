@@ -21,20 +21,30 @@
       border-radius: 14px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .header .bio {
+      margin: 0;
+      max-width: none;
+    }
     .photo {
-      width: 200px;
-      height: 200px;
+      flex: none;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      margin: 0 auto 20px;
       border: 3px solid #eee;
     }
     h1 {
-      text-align: center;
       font-weight: 600;
-      margin-bottom: 10px;
-      font-size: 2.5em;
+      margin: 0 0 6px;
+      font-size: 2.2em;
     }
     h2 {
       text-align: center;
@@ -43,15 +53,13 @@
       font-size: 1.6em;
     }
     .subtitle {
-      text-align: center;
-      font-size: 1.3em;
+      font-size: 1.15em;
       color: #555;
-      margin-bottom: 30px;
+      margin: 0 0 10px;
     }
     .links {
-      text-align: center;
-      margin-bottom: 35px;
-      font-size: 1.2em;
+      margin-bottom: 12px;
+      font-size: 1.05em;
     }
     .bio {
       max-width: 800px;
@@ -149,9 +157,16 @@
       .container {
         padding: 28px 20px;
       }
+      .header {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .header h1, .subtitle, .links, .header .bio {
+        text-align: center;
+      }
       .photo {
-        width: 160px;
-        height: 160px;
+        width: 140px;
+        height: 140px;
       }
       h1 {
         font-size: 2em;
@@ -175,26 +190,26 @@
 <body>
   <div class="container">
 
-    <!-- Photo -->
-    <img src="me.jpeg" alt="Ke Zhang photo" class="photo" width="200" height="200">
-
-    <!-- Name + Title -->
-    <h1>Ke Zhang (张轲)</h1>
-    <p class="subtitle">
-      PhD Student in Mathematics &bull; University of California, Riverside
-    </p>
-    <div class="links">
-      <a href="mailto:kzhan153@ucr.edu">Email</a> &nbsp;|&nbsp;
-      <a href="files/KeZhang_cv.pdf" target="_blank">CV</a> &nbsp;|&nbsp;
-      <a href="https://scholar.google.com/citations?user=QsY5g-QAAAAJ&amp;hl=en">Google Scholar</a> &nbsp;|&nbsp;
-      <a href="https://github.com/grenadeComing">GitHub</a> &nbsp;|&nbsp;
-      <a href="https://www.linkedin.com/in/kezhang920/" target="_blank">LinkedIn</a>
+    <!-- Header: photo beside name, links, and bio -->
+    <div class="header">
+      <img src="me.jpeg" alt="Ke Zhang photo" class="photo" width="160" height="160">
+      <div>
+        <h1>Ke Zhang (张轲)</h1>
+        <p class="subtitle">
+          PhD Student in Mathematics &bull; University of California, Riverside
+        </p>
+        <div class="links">
+          <a href="mailto:kzhan153@ucr.edu">Email</a> &nbsp;|&nbsp;
+          <a href="files/KeZhang_cv.pdf" target="_blank">CV</a> &nbsp;|&nbsp;
+          <a href="https://scholar.google.com/citations?user=QsY5g-QAAAAJ&amp;hl=en">Google Scholar</a> &nbsp;|&nbsp;
+          <a href="https://github.com/grenadeComing">GitHub</a> &nbsp;|&nbsp;
+          <a href="https://www.linkedin.com/in/kezhang920/" target="_blank">LinkedIn</a>
+        </div>
+        <p class="bio">
+          My research develops and evaluates tool-augmented AI agents for formal mathematics, scientific simulation, and mathematical optimization.
+        </p>
+      </div>
     </div>
-
-    <!-- Bio -->
-    <p class="bio">
-      My research develops and evaluates tool-augmented AI agents for formal mathematics, scientific simulation, and mathematical optimization.
-    </p>
 
     <hr>
 
