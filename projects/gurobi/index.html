@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gurobi Code Repair Agent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gurobi Code Repair Agent — Ke Zhang</title>
   <style>
     h1 { font-size: 48px; }
     h2 { font-size: 32px; margin-top:40px; }
     p, li { font-size: 20px; line-height:1.8; }
+    @media (max-width: 600px) {
+      body { padding: 20px 16px !important; }
+      h1 { font-size: 32px; }
+      h2 { font-size: 24px; }
+      p, li { font-size: 17px; }
+    }
   </style>
 </head>
 
 <body style="font-family: -apple-system, system-ui, -webkit-system-font, sans-serif; padding:40px; max-width:1200px; margin:auto; font-size:20px;">
-  
+
   <h1>Gurobi Code Repair Agent</h1>
+  <p style="color:#777; font-style:italic;">
+    AAAI 2026 Workshop on AI for Scientific Research (AI4Research) &mdash; Accepted.
+  </p>
   <p>
     This agent automatically identifies and repairs optimization model bugs in Gurobi LP/MIP/ILP code using tool execution, static analysis, and test-driven evaluation.
   </p>
@@ -37,9 +47,9 @@
   </ul>
 
   <p>
-    On top of this benchmark, I implemented a set of repair tools, where idea is used in the Lean4 project. 
-    However, the Gurobi domain introduces its own unique challenges: Gurobi model or gurobipy execution exposes only coarse solver signals, unlike Python exceptions that often pinpoint the exact line or operation causing failure. 
-    The running result of Gurobi model (coding) will not tell you if your coding is correct, hence human unittest for different input-output check is necessary, hence the oracle code matters.
+    On top of this benchmark, I implemented a set of repair tools, building on the tool design from my <a href="../lean4/">Lean4 project</a>.
+    However, the Gurobi domain introduces its own challenges: running a gurobipy model exposes only coarse solver signals, unlike Python exceptions, which often pinpoint the exact line or operation that failed.
+    A model that runs without errors is not necessarily correct, so human-written unit tests that check input&ndash;output behavior, and the reference (oracle) implementations behind them, are essential.
   </p>
 
   <p>
@@ -47,21 +57,10 @@
   </p>
 
   <h2>Paper</h2>
-  <iframe 
-    src="../../pdfjs/web/viewer.html?file=/projects/gurobi/gurobi_paper.pdf"
-    style="width:100%; height:1200px; border:none;">
-  </iframe>
-
-  <p style="font-size: 18px; color:#666; margin-top:10px;">
-    If the paper does not display, you can 
-    <a href="gurobi_paper.pdf" target="_blank">open it in a new tab</a>.
-  </p>
-
-  <h2>Examples</h2>
   <p>
-    Coming soon: code snippets showing a broken Gurobi model, the agent’s tool calls, and the repaired solution.
+    <a href="gurobi_paper.pdf" target="_blank">Read the paper (PDF)</a>
   </p>
 
-  <p><a href="../../index.html">← Back to Home</a></p>
+  <p><a href="../../">← Back to Home</a></p>
 </body>
 </html>

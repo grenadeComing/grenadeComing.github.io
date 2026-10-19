@@ -88,6 +88,28 @@
       border: none;
       border-top: 1px solid #ddd;
     }
+    @media (max-width: 600px) {
+      body {
+        padding: 16px 12px;
+        font-size: 16px;
+      }
+      .container {
+        padding: 28px 20px;
+      }
+      .photo {
+        width: 160px;
+        height: 160px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      .links {
+        line-height: 1.8;
+      }
+      .pub-list {
+        padding-left: 20px;
+      }
+    }
 </style>
 </head>
 
@@ -95,7 +117,7 @@
   <div class="container">
 
     <!-- Photo -->
-    <img src="me.jpeg" alt="Ke Zhang photo" class="photo">
+    <img src="me.jpeg" alt="Ke Zhang photo" class="photo" width="200" height="200">
 
     <!-- Name + Title -->
     <h1>Ke Zhang (张轲)</h1>
@@ -126,10 +148,10 @@
         ToolGate is an executable acceptance pipeline for LLM-generated scientific benchmark questions that require specialist software. It verifies proposed answers by execution, filters out questions solvable without tools, and confirms that a tool-using agent can solve the remainder; applied to FEniCSx, it produces 128 unique protocol survivors from 500 generation attempts.
       </li>
       <li>
-        <strong>Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization</strong> <a href="https://arxiv.org/abs/2606.31002" target="_blank">[arXiv]</a><br>
+        <strong>Beyond Compilation: Evaluating Faithful Natural-Language-to-Lean Statement Formalization</strong> <a href="https://arxiv.org/abs/2606.31002" target="_blank">[arXiv]</a> <a href="https://github.com/grenadeComing/beyond-compilation" target="_blank">[Code]</a> <a href="https://huggingface.co/datasets/grenadeComing/beyond-compilation-benchmark" target="_blank">[Dataset]</a><br>
         <u>Ke Zhang</u>, Patricio Gallardo, Sudhir Murthy, Yi Xie, Zhi Wang, Maziar Raissi.<br>
         We measure the gap between Lean compilation and semantic faithfulness in open-ended, graduate-level statement autoformalization without canonical Lean references. On a 400-statement benchmark, we show that compile rate can substantially overstate formalization quality. A controlled factorial study then separates how expert drafting, Mathlib search, and Lean feedback affect validity and faithfulness.
-        <br><strong>Previous work:</strong> <a href="pdfjs/web/viewer.html?file=/projects/lean4/LLM_lean_LLM.pdf" target="_blank"><em>Agentic Lean Autoformalization (ALA) v1</em></a> <span class="venue">NeurIPS 2025 LLM Evaluation Workshop</span>.<br>
+        <br><strong>Previous work:</strong> <a href="projects/lean4/LLM_lean_LLM.pdf" target="_blank"><em>Agentic Lean Autoformalization (ALA) v1</em></a> <span class="venue">NeurIPS 2025 LLM Evaluation Workshop</span>. <a href="projects/lean4/">[Poster]</a><br>
         Patricio Gallardo, Maziar Raissi, <u>Ke Zhang</u>, Sudhir Murthy.<br>
         This earlier work led to our study of semantic faithfulness beyond compilation.
       </li>
@@ -150,7 +172,7 @@
         <strong>Agentic Repair of Gurobi Optimization Models via Tool Use: A Fractional-Factorial
         Study of Knowledge, Diagnostics, and Execution</strong> <a href="projects/gurobi/" target="_blank">[Project page]</a><br>
         <u>Ke Zhang</u>, Maziar Raissi.<br>
-        <span class="venue">AAAI 2025 Workshop (AI4Research)</span> &mdash; Accepted.
+        <span class="venue">AAAI 2026 Workshop (AI4Research)</span> &mdash; Accepted.
         Benchmark of 26 Gurobi problems with 260 unit tests, an LLM-based bug generator,
         and a RAG-grounded repair agent over the Gurobi Python API, analyzed via
         fractional factorial design.

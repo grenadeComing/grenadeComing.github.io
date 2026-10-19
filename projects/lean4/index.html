@@ -1,35 +1,60 @@
-<body style="
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial;
-  padding: 40px;
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.6;
-">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lean4 Autoformalization System — Ke Zhang</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+      color: #333;
+    }
+    a {
+      color: #0066cc;
+    }
+    .poster {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
   <h1>Lean4 Autoformalization System</h1>
   <p>
-    This project develops an agent system that translates natural-language mathematics into Lean4 code, 
-    fills by <code>sorry</code>, and verifies correctness through theorem checking, 
-    REPL feedback, and other tools via iterative refinement. The system will be extended to support 
+    This project develops an agent system that translates natural-language mathematics into Lean4 code,
+    with proofs left as <code>sorry</code>, and verifies correctness through theorem checking,
+    REPL feedback, and other tools via iterative refinement. The system will be extended to support
     full theorem proving.
   </p>
   <p>
-    Here is the <a href="https://github.com/grenadeComing/Lean_Translation_Agent" target="_blank">GitHub repo</a>
+    Here is the <a href="LLM_lean_LLM.pdf" target="_blank">workshop paper (PDF)</a>
     and the <a href="https://arxiv.org/abs/2604.16538" target="_blank">paper on arXiv</a>.
   </p>
-  
+
   <hr style="margin: 20px 0;">
   <h2>Poster at NeurIPS 2025 workshop in San Diego, CA</h2>
-  <iframe 
-    src="../../pdfjs/web/viewer.html?file=/projects/lean4/lean4_poster.pdf"
-    style="width:100%; height:900px; border:none;">
-  </iframe>
-  <p style="font-size: 0.9em; color:#666; margin-top:10px;">
-    If the poster does not display, you can 
-    <a href="/projects/lean4/lean4_poster.pdf" target="_blank">open it in a new tab</a>.
+  <a href="lean4_poster.pdf" target="_blank">
+    <img src="lean4_poster.webp" alt="ALA poster, NeurIPS 2025 LLM Evaluation Workshop" class="poster" width="1334" height="2000">
+  </a>
+  <p class="note">
+    Click the poster to open the full-resolution PDF.
   </p>
-  
+
   <hr style="margin: 40px 0;">
   <p style="text-align: center;">
-    <a href="/">← Back to main website</a>
+    <a href="../../">← Back to main website</a>
   </p>
 </body>
+</html>

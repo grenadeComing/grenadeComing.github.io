@@ -1,35 +1,63 @@
-<body style="
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial;
-  padding: 40px;
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.6;
-">
-  <h1>When Tools Help and Hurt Scientific Simulator Agents: A PHREEQC-MCQ-200 Case Study</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PHREEQC-MCQ-200 — Ke Zhang</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+      color: #333;
+    }
+    a {
+      color: #0066cc;
+    }
+    .poster {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>PHREEQC-MCQ-200: A Diagnostic Benchmark for Tool-Augmented Scientific Simulator Agents</h1>
   <p>
-    This project equips state-of-the-art LLMs with PHREEQC &mdash; a widely used open-source
-    geochemistry simulator for aqueous speciation, chemical reactions, and reactive transport &mdash;
-    as an external tool, and tests whether simulator access improves scientific question answering
-    on a new 200-question benchmark (PHREEQC-MCQ-200). Because raw PHREEQC output is huge,
-    the agent uses a table-of-contents (TOC) representation to cut token usage roughly in half
-    while preserving accuracy. Tool access lifts top-model accuracy by ~40 points over direct
-    answering, but tool use is not purely additive: agents also lose some questions they
-    previously answered correctly.
+    PHREEQC-MCQ-200 is a diagnostic benchmark for tool-augmented agents using a deterministic scientific
+    simulator. Beyond aggregate accuracy, we measure retention&mdash;whether tool use preserves answers a
+    model already gets right&mdash;and show that overall gains can coexist with item-level regressions.
+    We also compare raw-output access with a metadata-guided TOC interface, finding that the effectiveness
+    of output access depends on model capability.
+  </p>
+  <p>
+    Paper: <a href="https://arxiv.org/abs/2607.00436" target="_blank">arXiv:2607.00436</a>
   </p>
 
   <hr style="margin: 20px 0;">
-  <h2>Poster &mdash; work submitted to NeurIPS</h2>
-  <iframe
-    src="../../pdfjs/web/viewer.html?file=/projects/phreeqc/phreeqc_poster.pdf"
-    style="width:100%; height:900px; border:none;">
-  </iframe>
-  <p style="font-size: 0.9em; color:#666; margin-top:10px;">
-    If the poster does not display, you can
-    <a href="/projects/phreeqc/phreeqc_poster.pdf" target="_blank">open it in a new tab</a>.
+  <h2>Poster</h2>
+  <p>
+    <em>When Tools Help and Hurt Scientific Simulator Agents: A PHREEQC-MCQ-200 Case Study</em>
+  </p>
+  <a href="phreeqc_poster.pdf" target="_blank">
+    <img src="phreeqc_poster.webp" alt="PHREEQC-MCQ-200 poster" class="poster" width="2000" height="1556">
+  </a>
+  <p class="note">
+    Click the poster to open the full-resolution PDF.
   </p>
 
   <hr style="margin: 40px 0;">
   <p style="text-align: center;">
-    <a href="/">← Back to main website</a>
+    <a href="../../">← Back to main website</a>
   </p>
 </body>
+</html>
